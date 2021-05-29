@@ -6,7 +6,6 @@ import {
   ThemeProvider,
 } from '@material-ui/core/styles';
 
-import { Navbar } from './components/Navbar';
 import { Routes } from './components/Routes';
 import './App.css';
 
@@ -23,8 +22,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
   },
   fullPage: {
-    height: '100%',
-    width: '100%',
+    height: '100vh',
+    width: '100vw',
   },
 }));
 
@@ -34,7 +33,6 @@ function App() {
   return (
     <div className={classes.app}>
       <ThemeProvider theme={theme}>
-        <Navbar />
         <Routes />
       </ThemeProvider>
       {/*
