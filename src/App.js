@@ -1,9 +1,43 @@
-import logo from './logo.svg';
+import React from 'react';
+
+import {
+  makeStyles,
+  createMuiTheme,
+  ThemeProvider,
+} from '@material-ui/core/styles';
+
+import { Navbar } from './components/Navbar';
+import { Routes } from './components/Routes';
 import './App.css';
 
+const useTheme = () =>
+  createMuiTheme({
+    palette: {
+      primary: { main: '#292929' },
+      secondary: { main: '#212121' },
+    },
+  });
+
+const useStyles = makeStyles((theme) => ({
+  app: {
+    textAlign: 'center',
+  },
+  fullPage: {
+    height: '100%',
+    width: '100%',
+  },
+}));
+
 function App() {
+  const classes = useStyles();
+  const theme = useTheme();
   return (
-    <div className="App">
+    <div className={classes.app}>
+      <ThemeProvider theme={theme}>
+        <Navbar />
+        <Routes />
+      </ThemeProvider>
+      {/*
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -13,11 +47,12 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer"f
         >
           Learn React
         </a>
       </header>
+      */}
     </div>
   );
 }
