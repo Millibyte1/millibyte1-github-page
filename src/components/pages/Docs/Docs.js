@@ -44,12 +44,12 @@ const Docs = () => {
     <div className={classes.fullPage} id="docs-main-div">
       <MuiThemeProvider theme={buttonsTheme}>
         <div className={classes.buttons} id="docs-buttons">
-          <a class="makeStyles-link-11" href="/docs/array64/dokka.zip" target="_blank" underline="none" download>
+          <a class="makeStyles-link-11" href="/docs/array64/dokka.zip?forcedownload=1" target="_blank" underline="none" download>
             <Button className={classes.button} color="secondary" variant="contained" >
               <Typography variant="body1">Download KDoc</Typography>
             </Button>
           </a>
-          <a class="makeStyles-link-11" href="/docs/array64/dokkaJavadoc.zip" target="_blank" underline="none" download>
+          <a class="makeStyles-link-11" href="/docs/array64/dokkaJavadoc.zip?forcedownload=1" target="_blank" underline="none" download>
             <Button className={classes.button} color="secondary" variant="contained" >
               <Typography variant="body1">Download JavaDoc</Typography>
             </Button>
